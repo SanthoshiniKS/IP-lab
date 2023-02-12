@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .font {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+            background: #03f7ff;
+            background: -webkit-linear-gradient(to right,
+                    #27ffdb,
+                    #1de3fd,
+                    #5b559f);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right,
+                    #33ebd6,
+                    #1ddbfd,
+                    #0669ff);
+        }
+        button{
+            border-radius: 8px;
+            border: 2px solid blue;
+            background-color: rgb(172, 235, 246);
+        }
+    </style>
+</head>
+
+<body class="font">
+    <h1>IP ADDRESS VALIDATION</h1>
+        <h2> ENTER ANY IP ADDRESS:</h2>
+        <input type="text" id="ip">
+        <p class="font">Click the button to check the ip address is valid or not.</p>
+        <button onclick="myFunction()">CHECK</button>
+        <h3 class="font" id="demo"></h3>
+        <p class="font" id="display"></p>
+        <script>
+            var down = document.getElementById('display');
+            function myFunction() {
+                var x = document.getElementById("ip").value;
+                document.getElementById("demo").innerHTML = "Entered IP Address: " + x;
+                var status =
+                    /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(x);
+                if (status == true) {
+                    down.innerHTML = "Valid IP Address";
+                }
+                else {
+                    down.innerHTML = "InValid IP Address";
+                }
+            }
+        </script>
+</body>
+</html>

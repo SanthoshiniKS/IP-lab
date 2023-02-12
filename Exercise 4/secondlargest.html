@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color: lightblue;text-align: center;color:blue">
+    <h1>Second Smallest Element and Second Largest Element</h1>
+    <h2 id="array1" style="font-size: x-large;"></h2>
+    <h2 id="array" style="font-size: x-large;"></h2>
+    <h4 id="small" style="font-size: x-large;"></h4>
+    <h4 id="large" style="font-size: x-large;"></h4>
+    <script>
+        const arrays = [];
+        var size = prompt("Enter Array Size:");
+        for (var i = 0; i < size; i++) {
+            arrays[i] = prompt('Enter array Element ' + (i + 1));
+        }
+        document.getElementById("array1").innerHTML = "Array Elements Before Sorting: " + arrays;
+        arrays.sort(function(a,b){
+            return a-b;
+        });
+        document.getElementById("array").innerHTML = "Array Elements After Sorting: " + arrays;
+        document.getElementById("small").innerHTML = "Second Smallest Element is: " + arrays[1];
+        document.getElementById("large").innerHTML = "Second Largest Element is: " + arrays[arrays.length - 2];
+    </script>
+</body>
+
+</html>

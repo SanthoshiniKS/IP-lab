@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3 Letter Words</title>
+        <style>
+            body{
+                background-color:plum;
+                text-align: center;
+            }
+            button{
+                border: 2px solid purple;
+                border-radius: 8px;;
+                background-color:pink;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color:purple">3 LETTER WORDS</h1>
+        <h2>Entered Text is:</h2>
+        <h3 id="sentence"></h3>
+        <button onclick="words()">Generate words</button>
+        <p id="letters" style="font-weight: bolder;font-size: larger;"></p>
+        <script>
+            let text=prompt("Enter A Sentence:");
+            document.getElementById("sentence").innerHTML=text;
+            const warray=text.split(" ");
+            const array=[];
+            function words(){
+            for(var i=0;i<warray.length;i++)
+            {
+                if(warray[i].length==3)
+                {
+                   array.push(warray[i]);
+                }
+            }
+            document.getElementById("letters").innerHTML="The Three letter words in the given sentence : "+array;
+        }
+        </script>
+    </body>
+</html>

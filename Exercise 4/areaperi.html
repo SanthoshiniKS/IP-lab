@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head style="text-align: center;">
+    <style>
+        label {
+            display: block;
+        }
+
+        .font {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+            background-color: lightpink;
+        }
+        button{
+            background-color: plum;
+            border: 2px solid purple;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body class="font">
+    <h1 style="color:purple;">Calculate Area and Perimeter of A Circle</h1>
+    <label for="radius">Enter Radius:
+        <input type="text" id="radius">
+    </label><br><br>
+    <button id="calc">Calculate</button>
+    <h2 id="area"></h2>
+    <h2 id="perimeter"></h2>
+    <script>
+        var radEl = document.querySelector("#radius");
+        var calc = document.querySelector("#calc");
+        calc.onclick = function () {
+            area = Number(radEl.value) * Number(radEl.value) * Math.PI;
+            perimeter = 2 * Number(radEl.value) * Math.PI;
+            areagEl.innerHTML = "Area of the circle:" + area.toFixed(2) + "= "+Math.round(area);
+            perimeterEl.innerHTML = "Perimeter of the circle:" + perimeter.toFixed(2)+"= "+Math.round(perimeter);
+        }
+        var areagEl = document.querySelector("#area");
+        var perimeterEl = document.querySelector("#perimeter");
+    </script>
+</body>
+
+</html>
