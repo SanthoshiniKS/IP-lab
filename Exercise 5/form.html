@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="head">EMPLOYEE DETAILS</div>
+            <div class="input-group">
+                <label>Employee ID:</label>
+                <input type="text" id="eid" placeholder="eg: aa0000" onkeyup="idvalid()">
+                <span id="iderror"></span>
+            </div>
+            <div class="input-group">
+                <label>Employee Name:</label>
+                <input type="text" id="ename" placeholder="Enter your name" onkeyup="namevalid()">
+                <span id="nameerror"></span>
+            </div>
+            <div class="input-group">
+                <label>Dob :</label>
+                <input type="text" id="edob" placeholder="dd/mm/yyyy" onkeyup="datevalid()">
+                <span id="doberror"></span>
+            </div>
+            <div class="input-group">
+                <label id="ge" name="g">Gender: </label>
+                <div class="input-group gen">
+                <input type="radio" id="m" name="g"><label>Male</label>
+                <input type="radio" id="f" name="g"><label>Female</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Age:</label>
+                <input type="text" id="eage" placeholder="Age is calculated from dob" onkeyup="agevalid()">
+                <span id="ageerror"></span>
+            </div>
+            <div class="input-group add">
+                <label>Address</label>
+                <textarea rows="10" colums="50" id="ead" placeholder="Enter your address" onkeyup="advalid()"></textarea>
+                <span id="aderror"></span>
+                <span id="adcrt"></span>
+            </div>
+            <div class="input-group">
+                <label>Qualification :</label>
+                <select id="quali">
+                    <option value="B.E">B.E</option>
+                    <option value="B.Tech">B.TECH</option>
+                    <option value="Bsc">BSc</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Contact Number :</label>
+                <input group="text" id="contact" onkeyup="contactvalid()">
+                <span id="contacterror"></span>
+            </div>
+            <div class="input-group">
+                <label>Area of Interest :</label>
+                <input group="text" id="aoi" onkeyup="aoivalid()">
+                <span id="aoierror"></span>
+            </div>
+            <div class="input-group">
+                <label>Year of Experience :</label>
+                <input group="text" id="yoe" onkeyup="yoevalid()">
+                <span id="yerror"></span>
+            </div>
+            <div class="buttons">
+            <button onclick="submitvalid()">Submit</button>
+            <span id="submiterror"></span>
+            <button onclick="clear()">Clear</button>
+            <script src="form.js"></script>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
