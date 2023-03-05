@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Jquery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    .d {
+        text-align: center;
+    }
+    body {
+        background-color: rgb(222, 255, 255);
+    }
+    #b{
+        border-radius:5x;
+        border:2px solid darkcyan;
+        padding:10px 40px;
+        background-color:rgb(227, 244, 250);
+    }
+    textarea{
+        resize:none;
+    }
+</style>
+</html>
+<body>
+    <div class="d">
+        <h1 id="p1" style="background-color:cadetblue;color:snow;">JQUERY</h1>
+        <h3>Enter some text in textarea and find its length by clicking the button</h3>
+        <textarea id="t1" rows="10" cols="40"></textarea><br><br>
+        <button id="b">Calculate</button>
+        <p id="d1"></p>
+        <p id="d2"></p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#b").click(function () {
+                var l = $("#t1").val();
+                var ws=l.replace(/ /g,'');
+                $("#d1").html("Length of the text in Textarea is: "+l.length);
+                $("#d2").html("Length of the text in Textarea Without Spaces: "+ws.length);
+            })
+        })
+    </script>
+</body>

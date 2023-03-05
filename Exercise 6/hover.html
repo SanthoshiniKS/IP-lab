@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body style="text-align: center;background-color: plum;">
+    <h1 id="p1" style="background-color: darkorchid;color:snow">JQUERY</h1>
+    <h2>Hover on the image to change its opacity</h2>
+    <img src="img.jpg" height="300px" width="300px">
+    <script>
+        $(document).ready(function () {
+            $("img").hover(function () {
+                $(this).css("opacity", "0.5");
+            }, function () {
+                $(this).css("opacity", "1");
+
+            })
+        });
+    </script>
+</body>
+
+</html>
