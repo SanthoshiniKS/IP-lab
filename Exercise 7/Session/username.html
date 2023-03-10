@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session</title>
+        <style>
+         .content{
+            max-width: 300px;
+            margin:auto;
+        }
+        .bt{
+            text-align: center;
+            padding:10px;
+        }
+        button{
+            padding: 8px 15px;
+            background: none;
+            border: 2px ridge pink;
+            border-style: ridge;
+        }
+        h1{
+            text-align:center;
+            border-bottom: 2px dashed black;
+        }
+        body{
+            background-color: lavenderblush;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Enter UserName and MailId</h1>
+        <div class="content">
+            
+        <form action="http://localhost:8080/WebApplication1/Servlets" method="post">
+            <b>UserName:</b><input type="text" name="t1"><br><br>
+            <b> Mail id:  </b><input type="email" name="t2"><br><br>
+            <div class="bt">
+                <button type="submit"><strong> Submit</strong></button>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
