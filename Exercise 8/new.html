@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin-top:150px;
+                
+            }
+            .content{
+                max-width: 300px;
+                margin:auto;
+            }
+            label{
+                display: inline-block;
+                width: 100px;
+                text-align: left;
+            }
+            .page{
+                border:2px solid black;
+                margin-left: 300px;
+                margin-right:300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <br>
+        <h1 style="text-align:center">LOGIN PAGE</h1>
+        <div class="content">
+        <form action="http://localhost:8080/WebApplication1/Servletprgm" method="post">
+            <label>Mail ID:</label><input type="email" name="t1"><br><br>
+            <label>Password:</label><input type="password" name="p1"><br><br>
+            <center><input type="submit" class="bt"></center><br><br>
+        </form>
+        </div>
+        </div>
+    </body>
+</html>
