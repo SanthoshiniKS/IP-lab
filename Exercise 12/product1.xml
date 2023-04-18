@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<Product>
+    <Product-details>
+        <Pid>p001</Pid>
+        <Pname>Pen</Pname>
+        <Price>5.00</Price>
+        <stock>Available</stock>
+    </Product-details>
+    <Product-details>
+        <Pid>p241</Pid>
+        <Pname>Camera</Pname>
+        <Price>500.00</Price>
+        <stock>Available</stock>
+    </Product-details>
+    <Product-details>
+        <Pid>p2481</Pid>
+        <Pname>Laptop</Pname>
+        <Price>55000</Price>
+        <stock>Available</stock>
+    </Product-details>
+    <Product-details>
+        <Pid>p561</Pid>
+        <Pname>Ipad</Pname>
+        <Price>55000.00</Price>
+        <stock>Available</stock>
+    </Product-details>
+</Product>

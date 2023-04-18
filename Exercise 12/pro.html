@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table,th,td {
+            border : 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td {
+            padding: 5px;
+        }
+    </style>
+    <body>
+<CENTER>
+        <h1>PRODUCT DETAILS</h1>
+        Enter Product Id : <input type="text" id="pid">
+        <input type="button" value="submit" onclick="loadDoc()">
+    <br><br><BR><BR>
+        <table id="demo" WIDTH="700PX">
+        <script>
+            function loadDoc() {
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function(){
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        var xmlDoc = xmlhttp.responseXML;
+                        var table = "<tr><th colspan='4'>Product Details</th></tr><tr><th>Id</th><th>Name</th><th>Price</th><th>Stock</th></tr>";
+                        var x = xmlDoc.getElementsByTagName("Product-details");
+                        var k=document.getElementById("pid").value;
+                        for (i = 0; i < x.length; i++)
+                        {
+                            if (k.match(x[i].getElementsByTagName('Pid')[0].childNodes[0].nodeValue)) {
+                                table += "<tr><td>" +
+                                        x[i].getElementsByTagName("Pid")[0].childNodes[0].nodeValue +
+                                        "</td><td>" +
+                                        x[i].getElementsByTagName("Pname")[0].childNodes[0].nodeValue +
+                                        "</td><td>" +
+                                        x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue +
+                                        "</td><td>" +
+                                        x[i].getElementsByTagName("stock")[0].childNodes[0].nodeValue +
+                                        "</td></tr>";
+                            }
+                        }
+                        document.getElementById("demo").innerHTML = table;
+                    }
+                }
+                xmlhttp.open("GET", "product1.xml", true);
+                xmlhttp.send();
+            }
+            </script>
+</table></CENTER>
+    </body>
+</html>
