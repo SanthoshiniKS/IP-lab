@@ -1,10 +1,8 @@
 package client;
-import java.util.*;
+
 public class clientside {
     public static void main(String[] args) {
-        Scanner obj=new Scanner(System.in);
-        int id=obj.nextInt();
-        System.out.println(getDetails(id));
+        System.out.println(getDetails(001));
     }
 
     private static String getDetails(int id) {
